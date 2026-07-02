@@ -1,0 +1,427 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/aarya/ontologies/2026/5/untitled-ontology-4/"
+     xml:base="http://www.semanticweb.org/aarya/ontologies/2026/5/untitled-ontology-4/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ECommerceOntology="http://www.ecommerceontology.com/ECommerceOntology#">
+    <owl:Ontology rdf:about="http://www.ecommerceontology.com/ECommerceOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#belongsToCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#belongsToCategory">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Product"/>
+        <rdfs:range rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#cartContains -->
+
+    <owl:ObjectProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#cartContains">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#ShoppingCart"/>
+        <rdfs:range rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#containsProduct -->
+
+    <owl:ObjectProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#containsProduct">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Order"/>
+        <rdfs:range rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#hasCart -->
+
+    <owl:ObjectProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#hasCart">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Customer"/>
+        <rdfs:range rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#ShoppingCart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#makesPayment -->
+
+    <owl:ObjectProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#makesPayment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Customer"/>
+        <rdfs:range rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Payment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#placesOrder -->
+
+    <owl:ObjectProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#placesOrder">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Customer"/>
+        <rdfs:range rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Order"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#reviewsProduct -->
+
+    <owl:ObjectProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#reviewsProduct">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Review"/>
+        <rdfs:range rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#soldBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#soldBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Product"/>
+        <rdfs:range rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Seller"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#writesReview -->
+
+    <owl:ObjectProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#writesReview">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Customer"/>
+        <rdfs:range rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Review"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#customerName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#customerName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Customer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#orderDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#orderDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Order"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#paymentAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#paymentAmount">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Payment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#price">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#productName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#productName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#quantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#quantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#rating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ecommerceontology.com/ECommerceOntology#rating">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Book -->
+
+    <owl:Class rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Book">
+        <rdfs:subClassOf rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#CashOnDelivery -->
+
+    <owl:Class rdf:about="http://www.ecommerceontology.com/ECommerceOntology#CashOnDelivery">
+        <rdfs:subClassOf rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Payment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Category -->
+
+    <owl:Class rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Category"/>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Clothing -->
+
+    <owl:Class rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Clothing">
+        <rdfs:subClassOf rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#CreditCardPayment -->
+
+    <owl:Class rdf:about="http://www.ecommerceontology.com/ECommerceOntology#CreditCardPayment">
+        <rdfs:subClassOf rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Payment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Customer -->
+
+    <owl:Class rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Customer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#placesOrder"/>
+                <owl:someValuesFrom rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Order"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#DebitCardPayment -->
+
+    <owl:Class rdf:about="http://www.ecommerceontology.com/ECommerceOntology#DebitCardPayment">
+        <rdfs:subClassOf rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Payment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Electronics -->
+
+    <owl:Class rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Electronics">
+        <rdfs:subClassOf rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Order -->
+
+    <owl:Class rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Order">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#containsProduct"/>
+                <owl:someValuesFrom rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Payment -->
+
+    <owl:Class rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Payment"/>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Product -->
+
+    <owl:Class rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Product"/>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Review -->
+
+    <owl:Class rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Review">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#reviewsProduct"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Seller -->
+
+    <owl:Class rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Seller"/>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#ShoppingCart -->
+
+    <owl:Class rdf:about="http://www.ecommerceontology.com/ECommerceOntology#ShoppingCart"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Aarya -->
+
+    <owl:NamedIndividual rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Aarya">
+        <rdf:type rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Customer"/>
+        <ECommerceOntology:hasCart rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Cart001"/>
+        <ECommerceOntology:makesPayment rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Payment001"/>
+        <ECommerceOntology:placesOrder rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Order001"/>
+        <ECommerceOntology:writesReview rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Review001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#AmazonSeller -->
+
+    <owl:NamedIndividual rdf:about="http://www.ecommerceontology.com/ECommerceOntology#AmazonSeller">
+        <rdf:type rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Seller"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#BooksCategory -->
+
+    <owl:NamedIndividual rdf:about="http://www.ecommerceontology.com/ECommerceOntology#BooksCategory">
+        <rdf:type rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Cart001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Cart001">
+        <rdf:type rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#ShoppingCart"/>
+        <ECommerceOntology:cartContains rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#iPhone15"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#ElectronicsCategory -->
+
+    <owl:NamedIndividual rdf:about="http://www.ecommerceontology.com/ECommerceOntology#ElectronicsCategory">
+        <rdf:type rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#JavaBook -->
+
+    <owl:NamedIndividual rdf:about="http://www.ecommerceontology.com/ECommerceOntology#JavaBook">
+        <rdf:type rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Book"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Order001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Order001">
+        <rdf:type rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Order"/>
+        <ECommerceOntology:containsProduct rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#iPhone15"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Payment001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Payment001">
+        <rdf:type rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Payment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#Review001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ecommerceontology.com/ECommerceOntology#Review001">
+        <rdf:type rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Review"/>
+        <ECommerceOntology:reviewsProduct rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#iPhone15"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ecommerceontology.com/ECommerceOntology#iPhone15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ecommerceontology.com/ECommerceOntology#iPhone15">
+        <rdf:type rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#Electronics"/>
+        <ECommerceOntology:belongsToCategory rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#ElectronicsCategory"/>
+        <ECommerceOntology:soldBy rdf:resource="http://www.ecommerceontology.com/ECommerceOntology#AmazonSeller"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
